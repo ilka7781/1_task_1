@@ -1,0 +1,68 @@
+.main_container{
+  text-align: center;
+  padding: 2em;
+  background-color: rgba(94, 94, 94, 0.9);
+  margin-top: 20px;
+  height: 85vh;
+  overflow-y: auto;
+  color: white;
+  h1{
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  h2{
+    font-size: 35px;
+  }
+  h3{
+    font-size: 30px;
+  }
+}
+
+.students_grid{
+  padding: 2em;
+  justify-content: center;
+
+}
+.students_card{
+  padding: 1.5em;
+  color: black!important;
+  background-color: gray!important;
+  height: max-content;
+  width: 300px;
+  &_avatar{
+    margin: auto;
+    height: 110px!important;
+    width: 170px!important;
+    border-radius: 10px!important;
+  }
+}
+.main_button{
+  color: white;
+  font-size: 30px;
+  padding: 0.4em 1em;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 10px;
+  &:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease-out;
+  }
+  &_delete{
+    margin-top: 10px;
+    padding: 0.5em;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    &:hover{
+      background-color: black;
+      color: white;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+
+    }
+  }
+}

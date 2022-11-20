@@ -1,0 +1,25 @@
+.update_inputs{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.inputs{
+  color: white!important;
+}
+.update_button{
+  color: white;
+  margin-top: 10px!important;
+  font-size: 20px;
+  padding: 0.7em 1em;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 10px;
+  border: solid 1px black;
+  &:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,29 @@
+//$fz: 100px;
+//%bm{
+//  border-bottom: 5px solid red;
+//}
+//.App {
+//  text-align: center;
+//  .app-text{
+//    @extend %bm;
+//    &:hover{
+//      color: #61dafb;
+//    }
+//  }
+//  span{
+//    color: red;
+//    font-size: $fz;
+//  }
+//}
+
+
+@import 'Null.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+body{
+  background-image: url("/img/back.png");
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  display: grid;
+}

@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  }
+
+.container {
+  width: 1220px;
+  margin: auto;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: black;
+  font-size: 27px;
+  padding: 10px;
+
+}
