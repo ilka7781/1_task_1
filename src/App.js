@@ -6,7 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import Main from "./components/main/main";
 import Protected from "./components/protected";
 import Admin from "./components/admin/admin";
-import {doc, onSnapshot} from "firebase/firestore";
+
 
 
 

@@ -6,7 +6,6 @@ import './updateBox.scss';
 import {MenuItem} from "@mui/material";
 
 const UpdateBox = ({student, setUpdateBox}) => {
-    const [students, setStudents] = useState([]);
     const [inputImage, setInputImage] = useState('');
     const [input, setInput] = useState('');
     const [inputLn, setInputLn] = useState('');
