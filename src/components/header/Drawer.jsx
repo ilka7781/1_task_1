@@ -42,11 +42,22 @@ const DrawerComp = (props) => {
                                 <Button><Link to='/admin' className='nav_link'>Admin</Link></Button>
                             </ListItemText>
                         </ListItemIcon>
-                        <ListItemIcon>
-                            <ListItemText>
-                                <Button onClick={props.handleSignOut}><Link to='/' className='nav_link'>Logout</Link></Button>
-                            </ListItemText>
-                        </ListItemIcon>
+                        {
+                            props.user?.displayName ? (
+                                <ListItemIcon>
+                                    <ListItemText>
+                                        <Button onClick={props.handleSignOut}><Link to='/' className='nav_link'>Logout</Link></Button>
+                                    </ListItemText>
+                                </ListItemIcon>
+                            ) : (
+                                <ListItemIcon>
+                                    <ListItemText>
+                                        <Button className='nav_link'><Link to='/reg' className='nav_link'>Sign in</Link></Button>
+                                    </ListItemText>
+                                </ListItemIcon>
+                                )
+                        }
+
                     </ListItem>
                 </List>
             </Drawer>

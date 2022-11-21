@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
                                     <Link to='/main'>
                                         <img src={logo} className={'navbar_logo'} alt="logo"/>
                                     </Link>
-                                    <DrawerComp className='navbar_second' handleSignOut={handleSignOut}/>
+                                    <DrawerComp className='navbar_second' user={user} handleSignOut={handleSignOut}/>
                                 </div>
                             ) : (
                                 <div className='navbar_second'>
