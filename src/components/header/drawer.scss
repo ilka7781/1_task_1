@@ -1,0 +1,28 @@
+.menu_icon{
+  margin-left: 10em!important;
+  &_but{
+    font-size: 50px!important;
+  }
+}
+
+.navbar_list{
+  display: flex!important;
+  flex-direction: column!important;
+  justify-content: center!important;
+}
+.menu_button{
+  margin: 30px 0 0  0!important;
+  &_icon{
+    font-size: 50px!important;
+  }
+}
+@media (max-width: 655px) {
+  .menu_icon{
+    margin-left: 5em!important;
+  }
+}
+@media (max-width: 425px) {
+  .menu_icon{
+    margin-left: 2em!important;
+  }
+}

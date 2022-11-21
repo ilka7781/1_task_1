@@ -7,7 +7,11 @@
   box-sizing: border-box;
   background-color: white;
   }
+.navbar_second {
+  display: flex;
+  justify-content: space-between;
 
+}
 .container {
   width: 1220px;
   margin: auto;
@@ -19,4 +23,21 @@
   font-size: 27px;
   padding: 10px;
 
+}
+
+.navbar_burger{
+  display: none!important;
+}
+
+
+@media (max-width: 740px){
+  .navbar_burger{
+    display: block!important;
+  }
+  .navbar_menu{
+    display: none!important;
+  }
+  .navbar_container{
+    padding: 20px;
+   }
 }
