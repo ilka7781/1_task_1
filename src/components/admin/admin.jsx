@@ -15,24 +15,6 @@ const Admin = () => {
     const [inputClass, setInputClass] = useState('');
 
 
-    const createStudents = async () => {
-        const collectionRef = collection(db, "students");
-        const payload = {
-            imageUrl: inputImage,
-            name: input,
-            lastname: inputLn,
-            age: inputAge,
-            group: inputGroup,
-            class: inputClass
-        };
-        await addDoc(collectionRef, payload);
-        setInput('');
-        setInputLn('');
-        setInputAge('');
-        setInputImage('');
-        setInputGroup('');
-        setInputClass('');
-    }
 
     const groups = [
         {
@@ -83,8 +65,33 @@ const Admin = () => {
             class: 11
         }
     ]
-    const {register, handleSubmit, formState: {errors, isValid}} = useForm();
+    const {register, handleSubmit, formState: {errors}} = useForm();
     const onSubmit = data => console.log(data);
+
+    const createStudents = async () => {
+        const collectionRef = collection(db, "students");
+        const payload = {
+            imageUrl: inputImage,
+            name: input,
+            lastname: inputLn,
+            age: inputAge,
+            group: inputGroup,
+            class: inputClass
+        };
+
+        if (inputImage !== '' & input !== '' & inputLn !== '' & inputAge !== '' & inputGroup !== ''
+            & inputClass !== ''){
+            await addDoc(collectionRef, payload);
+        } else {
+            errors(true);
+        }
+        setInput('');
+        setInputLn('');
+        setInputAge('');
+        setInputImage('');
+        setInputGroup('');
+        setInputClass('');
+    }
 
     return (
         <div className='admin_body'>
@@ -153,7 +160,7 @@ const Admin = () => {
 
                     {errors.class && <span className='form_error'>Class is required</span>}
 
-                    <button disabled={!isValid} type='submit' className='form_submit' onClick={createStudents}>Submit</button>
+                    <button type='submit' className='form_submit' onClick={createStudents}>Submit</button>
                 </form>
 
             </Container>
